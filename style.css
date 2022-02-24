@@ -50,30 +50,31 @@ body {
   width: 65px;
 }
 
-.chart__item {
-  margin-bottom: 10px;
-}
-
 .chart__name {
   display: inline-block;
   text-align: center;
 }
 
-.chart__wrapper-standart {
+.chart__wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
   width: min-content;
+  margin-bottom: 10px;
+}
+
+.chart__standart {
+  position: relative;
 }
 
 .chart__standartValue {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -50%);
   background-color: #fff;
   font-weight: 600;
-  padding: 2px 5px;
+  padding: 1px 5px;
   border-radius: 3px;
 }
 
