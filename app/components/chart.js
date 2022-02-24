@@ -14,8 +14,6 @@ class Chart {
     }
     
     render(){
-        console.log(this.data)
-        console.log(this.dataVisual)
         const svg = `
             <svg xmlns="http://www.w3.org/2000/svg" width=${this.width} height="${this.dataVisual.front + this.dataVisual.back + this.dataVisual.db}px" class='chart__item'>
                 <g>            
@@ -45,7 +43,6 @@ class Chart {
     }
 
     renderStandart(color){
-        console.log(this.dataVisual)
         const svg = `
             <svg xmlns="http://www.w3.org/2000/svg" width=${this.width} height="${this.dataVisual}px" class='chart__item'>                    
                 <rect width="${this.width}px" height="${this.dataVisual}px" rx="${this.borderRadius}" fill="${color}"/>                                

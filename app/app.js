@@ -1,7 +1,7 @@
 import Charts from './components/charts.js'
 
 const App = () => {   
-    const url = 'https://rcslabs.ru/ttrp5.json'
+    const url = 'https://rcslabs.ru/ttrp1.json'
     const container = document.querySelector('.container') 
     const data = fetch(url, {
         method: 'GET',

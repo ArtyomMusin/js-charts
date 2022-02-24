@@ -118,13 +118,11 @@ class Charts {
 
         const maxChart = Math.max.apply(null, Object.values(totalValues))
         const ratio = maxChart > 0 ? this.chartMaxHeight / maxChart : 0
-        console.log(this.chartMaxHeight, maxChart)
 
         const finnalyValues = Object.keys(allCharts).reduce((obj1, key1) => {
             const subObj = allCharts[key1]
             if(typeof subObj !== 'object') {
                 obj1[key1] = Math.floor(allCharts[key1] * ratio) > this.minSize ? Math.floor(allCharts[key1] * ratio) : this.minSize
-                console.log(ratio)
                 return obj1
             }
             obj1[key1] = Object.keys(subObj).reduce((obj2, sKey) => {
