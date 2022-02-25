@@ -29,6 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
   min-height: 400px;
   margin-bottom: 1em;
   width: 100%;
@@ -257,7 +258,7 @@ svg {
     transform: translateY(-10px);
   }
   .charts-box {
-    transform: scale(0.6) translateX(-10%);
+    transform: scale(0.6);
   }
 }
 @media (max-width: 435px) {
@@ -268,7 +269,7 @@ svg {
     transform: translateY(-20px);
   }
   .charts-box {
-    transform: scale(0.6) translateX(-15%);
+    transform: scale(0.6);
   }
 }
 @media (max-width: 400px) {
@@ -279,7 +280,7 @@ svg {
     transform: translateY(-20px);
   }
   .charts-box {
-    transform: scale(0.6) translateX(-25%);
+    transform: scale(0.6);
   }
 }
 
@@ -288,7 +289,7 @@ svg {
     padding-bottom: 30px;
   }
   .charts-box {
-    transform: scale(0.6) translateX(-30%);
+    transform: scale(0.6);
   }
 }
 
@@ -297,7 +298,7 @@ svg {
     padding-bottom: 30px;
   }
   .charts-box {
-    transform: scale(0.6) translateX(-35%);
+    transform: scale(0.6);
   }
 }
 
@@ -313,6 +314,6 @@ svg {
   }
 
   .charts-box {
-    transform: scale(0.5) translateX(-45%);
+    transform: scale(0.5);
   }
 }
