@@ -1,3 +1,4 @@
-import App from './app/app.js'
 
-App()
+import getContent from './app/components/getContent.js'
+
+getContent()

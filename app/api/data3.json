@@ -1,0 +1,19 @@
+{
+    "title": "Mibre Office",
+    "dev": {
+      "front": 13,
+      "back": 16,
+      "db": 6
+    },
+    "test": {
+      "front": 11,
+      "back": 15,
+      "db": 9
+    },
+    "prod": {
+      "front": 23,
+      "back": 25,
+      "db": 6
+    },
+    "norm": 60
+  }

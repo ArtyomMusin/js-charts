@@ -1,8 +1,7 @@
 import Charts from './components/charts.js'
 
-const App = () => {   
-    const url = 'https://rcslabs.ru/ttrp1.json'
-    const container = document.querySelector('.container') 
+const App = (container, link) => {       
+    const url = link
     const data = fetch(url, {
         method: 'GET',
     })
@@ -12,6 +11,9 @@ const App = () => {
         charts.render()
         charts.showProgress()
     }) 
+
+    
 }
 
 export default App
+
