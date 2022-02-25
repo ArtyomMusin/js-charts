@@ -31,6 +31,7 @@ body {
   justify-content: flex-end;
   min-height: 400px;
   margin-bottom: 1em;
+  width: 100%;
 }
 
 .nav {
@@ -54,6 +55,7 @@ body {
   align-items: flex-end;
   position: relative;
   overflow: visible;
+  min-width: max-content;
 }
 
 .chart {
@@ -63,7 +65,7 @@ body {
   margin: 0 24px;
   margin-bottom: 1.5em;
   height: max-content;
-  width: 65px;
+  min-width: 65px;
 }
 
 .chart__name {
@@ -230,12 +232,32 @@ svg {
   overflow: visible;
 }
 
+@media (max-width: 600px) {
+  .charts-box {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 550px) {
+  .charts-box {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 500px) {
+  .charts-box {
+    transform: scale(0.7);
+  }
+}
+
 @media (max-width: 470px) {
   .title {
     padding-bottom: 70px;
   }
   .colors-mean__list {
     transform: translateY(-10px);
+  }
+  .charts-box {
+    transform: scale(0.6) translateX(-10%);
   }
 }
 @media (max-width: 435px) {
@@ -245,6 +267,9 @@ svg {
   .colors-mean__list {
     transform: translateY(-20px);
   }
+  .charts-box {
+    transform: scale(0.6) translateX(-15%);
+  }
 }
 @media (max-width: 400px) {
   .title {
@@ -253,11 +278,26 @@ svg {
   .colors-mean__list {
     transform: translateY(-20px);
   }
+  .charts-box {
+    transform: scale(0.6) translateX(-25%);
+  }
 }
 
 @media (max-width: 350px) {
   .title {
     padding-bottom: 30px;
+  }
+  .charts-box {
+    transform: scale(0.6) translateX(-30%);
+  }
+}
+
+@media (max-width: 330px) {
+  .title {
+    padding-bottom: 30px;
+  }
+  .charts-box {
+    transform: scale(0.6) translateX(-35%);
   }
 }
 
@@ -270,5 +310,9 @@ svg {
 @media (max-width: 300px) {
   .title {
     padding-bottom: 10px;
+  }
+
+  .charts-box {
+    transform: scale(0.5) translateX(-45%);
   }
 }

@@ -12,6 +12,7 @@ class Charts {
         this.data = data
         this.chartMaxHeight = maxSize
         this.minSize = 14
+        this.scale = 1
     }
 
     render(){
@@ -88,23 +89,10 @@ class Charts {
         }, {})
 
         Object.keys(points).map(item => new VisualProgress(this.chartsBox, points[item]).render())
-        this.#getScale()
     }
 
     #getTotal(obj, item){
         return Object.values(obj[item]).reduce((sum, value) => sum += value, 0)
-    }
-    #getScale(){
-        let scale = 1
-        window.addEventListener(`resize`, event => {
-            if (window.innerWidth < this.chartsBox.offsetWidth * scale && window.innerWidth >= 300) {
-                scale = scale > 0.3 ? scale - 0.1 : scale
-            }
-            if (window.innerWidth > this.chartsBox.offsetWidth * (scale + 0.1) ) {
-                scale = scale < 1 ? scale + 0.1 : scale
-            }
-            this.chartsBox.style.transform = `scale(${scale})`
-        }, false)
     }
     #getVisualValues(allCharts){
         const totalValues = Object.values(allCharts).reduce((obj, chartData, i) => {
